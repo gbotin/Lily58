@@ -1,138 +1,196 @@
-# Lily58 ビルドガイド 
+# Lily58 Pro ビルドガイド
 
+[English build guide](https://github.com/kata0510/Lily58/blob/master/Pro/Doc/buildguide_en.md)
 
 ## 必要部品
 
-| パーツ名 |  個数  |  備考  |
-|--------|-------|-------|
+| パーツ名 |  個数  |  備考  | 写真 |
+|--------|-------|-------|-------|  
 |Lily58 PCB | 2枚 ||
-|Lily58 ケース|1セット||
-|ProMicro|2個|はんだ付けの回数が減り、破損しやすいコネクタのため交換が可能になるため別売の[コンスルー](https://yushakobo.jp/shop/a01mc-00/)の使用を推奨|
-|キースイッチ(CherryMX,PG1350)|58pcs ※|ALPS軸非対応|
-|キーキャップ|1U 56個 1.5U 2個※|1.5Uの部分は1Uでも可|
-|ダイオード 1N4148|58本(個)||
-|タクトスイッチ|2個||
-|TRRSジャック|2個||
-|M2 スペーサー 6mm,10mm|10個,4個||
-|M2 ネジ 5mm|28個||
-|TRS(TRRS)ケーブル|1本|AUXケーブルと言われるオーディオ用のケーブルです|
-|MicroUSBケーブル|1本|Pro Micro側のコネクタの耐久性が低いためマグネット式を推奨|
+|Lily58 ケース|1セット4枚||
+|[ProMicro](https://yushakobo.jp/shop/promicro-spring-pinheader/)|2個|はんだ付けの回数が減り、破損しやすいコネクタのためProMicroの交換が可能になる別売の[スプリングピンヘッダ(コンスルー)](https://yushakobo.jp/shop/a01mc-00/)の使用を推奨(遊舎工房での販売品にはコンスルーが付属しています)||
+|キースイッチ(CherryMX,kailh choc)|58個|MXスイッチとchocスイッチはどちらかの排他利用||
+|[スイッチソケット](https://yushakobo.jp/shop/)|58個|キースイッチの取り付けに必要||
+|キーキャップ|58個|1.5Uの部分は1Uでも可||
+|ダイオード 1N4148W|58個|||
+|タクトスイッチ|2個|||
+|TRRSジャック|2個|||
+|M2 スペーサー |10個,4個|Choc:4mm,MX:7mm||
+|M2 ネジ|28個|||
+|TRRSケーブル|1本|AUXケーブルとも呼ばれている3.5mmオーディオ用のケーブル(4極ケーブルを推奨)||
+|MicroUSBケーブル|1本|Pro Micro側のコネクタの耐久性が低いためマグネット式を推奨||
+|OLEDモジュール|2個|||
 
-※キットには付属していないため用意が必要です。
+## はじめに
+Pro版はカラーバリエーションがあり、このビルドガイドの写真ではBlack版での実装をしていますがWhite版でも実装方法は全く変わらないため色を置き換えて進めてください。カラーや発売時期によって多少写真とは違うバーツが使われていることがございますが動作には差はありません。  
+  
+**また、Black版のケースは傷が付きやすい塗料(レジスト)のため輸送時の段階で既に傷が付いている物があります。  製品の特性上このようになってしまうため予めご了承ください。  
+また、組み立て後も硬いものに当たったり擦れたりすると傷が付きますのでご注意ください。**
+
+この基板(PCB)はリバーシブルタイプです**片面づつに**部品を実装していきます。
+
+裏表をわかりやすくするためマスキングテープなどで表面などに目印を付けます。
+![51965707-c6841d80-24ad-11e9-8e00-b7113b20fb67](https://user-images.githubusercontent.com/6285554/51967194-0947f480-24b2-11e9-860f-e45197cf0983.jpg)
+![unadjustednonraw_thumb_2ccb](https://user-images.githubusercontent.com/6285554/53638905-1d2a7600-3c6b-11e9-9a39-a121c9b407b6.jpg)
 
 
 ## ダイオードを取り付ける
-**ロープロファイルスイッチを使用する場合スイッチを取り付けるアクリルプレートとPCBの間の高さを稼げないため別売の[表面実装ダイオード(1N4148W)](http://akizukidenshi.com/catalog/g/gI-07084/)を使用することを推奨します。
-付属の足付きダイオードを使用する場合ははんだ付けした面の飛び出しを最小限にする必要があります。(足をカットしてからはんだ付けを行う)**
+ダイオードはチップタイプの物を使用します。リールに入っており、開封時に簡単に飛んでいってしまうので注意しながらゆっくりと開封します。(小皿の上などに置くと組立時にわかりやすいです)
+![2019-01-26 13 52 14](https://user-images.githubusercontent.com/6285554/51967206-1238c600-24b2-11e9-9617-01d8755c5b7f.jpg)
 
-このPCBはリバーシブルなので**片面づつに**部品を実装していきます。ダイオードを実装する面(オレンジの部品が見える方)が裏面の扱いになります。
-![img_2008](https://user-images.githubusercontent.com/6285554/52172886-61d20700-27bc-11e9-888f-42a95c7dd569.JPG)
-横から見るとこのような図になります
-![PCB2](https://user-images.githubusercontent.com/6285554/51115630-2642bd80-184c-11e9-93e5-8f85ee5e45b0.png)
+実装する面は**裏面**になります。  
 
-ダイオードの足を曲げます。
-ケース3枚を重ねた状態のものに押し当てると簡単にダイオードの足を曲げることができます。  
-![img_2009](https://user-images.githubusercontent.com/6285554/52172887-6ac2d880-27bc-11e9-9b3e-378a83c5a881.JPG)
- 
- PCBの裏側(スイッチやProMicroを取り付けるのと反対側)に折り曲げたダイオードを差し込みます。  
-ダイオードには向きがあります。PCBの表記を確認して正しい方向に差し込んで下さい。  
-以下の画像のようにダイオードの黒い線が常に基板の表示の三角形の横棒のある方向に向いた状態ではんだ付けをしてください。向きが正しくないとキーが反応しません。
-![46900579-542c0500-cedf-11e8-87a7-07f710f7e78e](https://user-images.githubusercontent.com/6285554/52002682-f7903c80-2505-11e9-907a-8407568322da.jpg)
-![diode](https://user-images.githubusercontent.com/6285554/48820707-83187f00-ed99-11e8-802e-90b23ca594a0.png)  
+ダイオードの線が以下の図のように常に基板の表示の三角形の棒のある方向に向いた状態ではんだ付けをしてください。向きが正しくないとキーが反応しません。
+![2019-02-28 14 08 00](https://user-images.githubusercontent.com/6285554/53542561-53300300-3b62-11e9-8b83-5758ce400491.png)
+
+PCBのダイオードの片方のパッドに予備はんだ(基板にはんだを少し溶かして盛る)をします。
+![2019-01-26 13 48 26](https://user-images.githubusercontent.com/6285554/51965724-cbe16800-24ad-11e9-8afc-17c5b8eebda8.jpg)
+
+その後ピンセットを使用してダイオードの片方を予備はんだを使用してはんだ付けをし、ダイオードを固定します。
+![2019-01-26 13 54 10](https://user-images.githubusercontent.com/6285554/51967222-1cf35b00-24b2-11e9-9624-26ff45f7bc9b.jpg)
+続いてもう片方もはんだ付けをします。  
   
-裏側からはんだ付けを行いますが落ちてしまうため、マスキングテープなどで止めます。止める際にダイオードが浮かないようにテープの上から力を加えて抑えながら仮固定します。
-![img_2010](https://user-images.githubusercontent.com/6285554/52172891-829a5c80-27bc-11e9-81ab-878caa8645f6.jpg)
-はんだ付けを行います。
-![unadjustednonraw_thumb_2d42](https://user-images.githubusercontent.com/6285554/52172899-b07fa100-27bc-11e9-9210-38bbdfb7d979.jpg)
-
-はんだ付けが終わったらダイオードの足をニッパー等でカットします。カットするときに足が飛びやすいため、手で足をつまみながらカットしましょう。
-カットが終わったら10mm(長いスペーサー)を取り付けします。
-![unadjustednonraw_thumb_2d48](https://user-images.githubusercontent.com/6285554/52172901-b07fa100-27bc-11e9-88a8-61a0eacfc6a4.jpg)
-
-## TRRSジャック/リセットスイッチをはんだ付けする
-表面の左上にTRRSジャックを取り付けします。どちらも裏返してはんだ付けする際に落ちたりずれやすいのでマスキングテープなどで仮固定します。
-![unadjustednonraw_thumb_2d4a](https://user-images.githubusercontent.com/6285554/52172948-8da1bc80-27bd-11e9-928b-fba7b8fa2b49.jpg)  
-裏側からはんだ付けをします。
-![unadjustednonraw_thumb_2d4b](https://user-images.githubusercontent.com/6285554/52172964-e6715500-27bd-11e9-9b0a-4186301a1d56.jpg)
+すべてのダイオードのはんだ付けが終わったらはんだ付けし忘れている箇所がないかチェックします。
+![2019-01-26 14 18 25](https://user-images.githubusercontent.com/6285554/51967226-1f55b500-24b2-11e9-93f5-2802156a4d10.jpg)
 
 
-## OLED用を使用する場合(オプション)
-OLEDを使用する場合は表面のProMicro近くの4つのパッドをジャンパさせてください。   
-![unadjustednonraw_thumb_2d41](https://user-images.githubusercontent.com/6285554/52172989-41a34780-27be-11e9-858a-cc69c2626160.jpg)
 
-## Pro Microをはんだ付けする
-   
-#### コンスルーを使用する場合
-[コンスルー](https://yushakobo.jp/shop/a01mc-00/)を使用する場合は以下のような取り付け方法を行ってください。
-Helixの[ビルドガイド](https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_jp.md#pro-micro)のProMicroの章を参考にはんだ付けを行います。
-ProMicro側のみはんだ付けを行い、PCB側ははんだ付けしません。
-はんだ付けが終わった後は浮きが無いようにしっかりと差し込みます。
+## ソケットをはんだ付けする
+ソケットはダイオードと同じ面である裏面に取り付けをします。
 
-### 付属のピンを使用する場合
-Pro Microを袋から取り出し、足が長い方を下にして以下の画像の赤線の内側の**PCBの線で囲まれている列を確認して**PCBに差し込みます。左右で差し込む場所が異なるため注意してください。 
+ダイオードと同じようにソケットのパッドの片方に予備はんだをし、ソケットを載せ、ピンセットや手で抑えながらはんだ付けをします。(手で抑える場合は火傷にご注意ください。)  
+写真はMXソケットのためChocソケットは下側に取り付けをしてください。
+![socket](https://user-images.githubusercontent.com/6285554/57197682-3de1b580-6fa5-11e9-90b1-fca894e1e7d2.png)
+
+力がかかる部品のため、両方をしっかりとはんだ付けをし、浮きがないか確認をします。  
+![2019-01-26 14 38 04](https://user-images.githubusercontent.com/6285554/51967230-2250a580-24b2-11e9-94ce-591746c49f50.jpg)
+
+
+## TRRSジャック リセットスイッチをはんだ付けする
+表面(目印のシールを貼り付けた方)に取り付けをします。  
+パーツを取り付け、マスキングテープで仮固定します。基板を裏返し、TRRSジャック、リセットスイッチが基板から浮いてないことを確認してはんだ付けをします。
+![2019-01-26 14 39 53](https://user-images.githubusercontent.com/6285554/51967627-2c26d880-24b3-11e9-9764-aa51975c1eef.jpg)
+![2019-01-26 14 43 23](https://user-images.githubusercontent.com/6285554/51967628-2cbf6f00-24b3-11e9-96e6-8f003c53d57b.jpg)
+
+
+## OLEDを取り付ける
+表面のProMicro部にある4つのジャンパ端子をはんだ付けし、ジャンパします。
+OLED用のコネクタを取り付けします。コネクタ内部にはんだが流れ込みやすいため、多くのはんだを流し込まないようにしてください。
+![unadjustednonraw_thumb_2db2](https://user-images.githubusercontent.com/6285554/53293031-d45c6280-380f-11e9-8f1c-1c167b27cfd3.jpg)
+
+OLEDピンをソケットに差し込み、その上にOLEDモジュールを載せ、4箇所はんだ付けをします。
+
+
+## Pro Microを取り付ける  
+ProMicroの袋に同封しているピンヘッダは使用を推奨しません。遊舎工房にて購入されたキットの場合スプリングピンヘッダが同梱されているのでそちらを使用します。  
+![IMG_2662](https://user-images.githubusercontent.com/6285554/57210525-f5171480-7017-11e9-9d92-3a345d53db94.jpg)  
+スプリングピンヘッダ(コンスルー)で取り付ける際はHelixのビルドガイドに記載されている方法に従ってはんだ付けをしてからLily58のPCBに取り付けを行ってください。[Helixビルドガイド](https://github.com/MakotoKurauchi/helix/blob/master/Doc/buildguide_jp.md#pro-micro)  
+抜き差しを可能にするためPCB側のはんだ付けは必要ありません。
+
+**PCBの線で囲まれている列を確認して**PCBに差し込みます。左右で差し込む場所が異なるため注意してください。 
 
 ![ProMicro_PCB](https://user-images.githubusercontent.com/6285554/48819671-6a599a80-ed94-11e8-8e5d-6a6abca326a7.png)
 
-Pro Microをその上から部品が乗っている面を下向きにして取り付けします。
-ProMicro側をはんだ付けをします。
-![46900581-54c49b80-cedf-11e8-88e1-25a1a2fb378d](https://user-images.githubusercontent.com/6285554/52002684-f95a0000-2505-11e9-83f6-6eb3dc8f2a02.jpg)
-![46900582-54c49b80-cedf-11e8-9107-83038838a7da](https://user-images.githubusercontent.com/6285554/52002687-f9f29680-2505-11e9-9ecf-b7bf3ad9f270.jpg)
 
-ProMicro側をはんだ付け後マスキングテープ等で固定し基板の裏側からはんだ付けを行います。  
-はんだ付け後ニッパーなどで余っているピンをカットします  
+## スペーサーを取り付ける
+10mmの丸いスペーサー4つをProMicro付近の穴に取り付けします。  
+ネジを基板の裏側から差込み、スペーサーを上から取り付けると取り付けやすいです。
+![2019-01-26 15 02 38](https://user-images.githubusercontent.com/6285554/51967859-c0913b00-24b3-11e9-966c-f3621ed398e5.jpg)
+
+最初につけた裏表識別用のマスキングテープはここで剥がしまします。
 
 ## キースイッチを取り付ける
-トッププレートにスペーサーとキースイッチを4箇所はめ込み、ピンが曲がらないように注意しながらPCBに取り付けし、浮きや傾きが無いことを確認して4つのスイッチをはんだ付けします。
-![unadjustednonraw_thumb_2d3e](https://user-images.githubusercontent.com/6285554/52173011-9a72e000-27be-11e9-9716-4c9a301c35ac.jpg)
-![4dabqoswsoi9o8wor3cdfg_thumb_2d49](https://user-images.githubusercontent.com/6285554/52173013-9fd02a80-27be-11e9-958e-54bb7e929f1d.jpg)
+位置合わせのためトッププレートスペーサーを取り付けします。(MX:7mm Choc:4mm)
+![2019-01-26 14 56 05](https://user-images.githubusercontent.com/6285554/51967395-912dfe80-24b2-11e9-9cc7-b4520063f36c.jpg)
+![2019-01-26 14 56 24](https://user-images.githubusercontent.com/6285554/51967376-83787900-24b2-11e9-82a0-850556daccfc.jpg)  
 
-トッププレートに残りのスイッチを取り付けをします。   
-正常に取り付けできている場合PCBからピンの足が少し出てきますが曲がっている場合やしっかりとはまっていない場合は下側の画像のように足が出てきません。足が曲がっている場合やプレートにしっかりはまっていないので1度取り外すなどして確認して下さい。   
-すべてのスイッチを取り付けをしてはんだ付けをします。
-![48868154-037fc400-ee1c-11e8-9d45-b888f744387a](https://user-images.githubusercontent.com/6285554/52002691-fb23c380-2505-11e9-8fa1-c75d20d3636d.jpg)
-![switch](https://user-images.githubusercontent.com/6285554/48868657-b7ce1a00-ee1d-11e8-9346-9bfc967e95cf.png)
-
-## ProMicroカバーを取り付け
-Pro Micro上部用のアクリルを取り付けます。  
-幅が広い方を外側にして取り付けます。低頭ネジで上部をネジ止めします。
-![promicro_cover](https://user-images.githubusercontent.com/6285554/48837829-c4288780-edc9-11e8-8efb-6714d8e68e92.png)
-![unadjustednonraw_thumb_2d47](https://user-images.githubusercontent.com/6285554/52173081-ea9e7200-27bf-11e9-9551-3eb41a0389cb.jpg)
-## キーマップの書き込み
-キーマップを書き込むために準備が必要です。導入されていることを前提に記述しております。[qmk公式のページなどを参考に導入して下さい。](https://docs.qmk.fm/#/getting_started_build_tools)  
+トッププレートにキースイッチを4箇所取り付けます。(Chocの場合は2箇所のほうが取り付けしやすいかもしれません)
+![2019-01-26 14 58 48](https://user-images.githubusercontent.com/6285554/51967380-87a49680-24b2-11e9-80b9-a45564afc8cf.jpg)
   
-QMK Toolboxを使用すれば環境構築の必要が無く、GUIで書き込みが行うことができます。(キーマップの変更はできません)
-[qmk/qmk_toolbox](https://github.com/qmk/qmk_toolbox/releases)
+位置の固定のためにスイッチを基板に差し込み、位置合わせをします。  
+![2019-01-26 15 01 12](https://user-images.githubusercontent.com/6285554/51967478-c3d7f700-24b2-11e9-9f2f-4e75efc215a1.jpg)
 
+
+スイッチのピンの曲がりが無いことなどを確認してから、中列から取り付けていき最後に外側向かって取り付けていくとしっかりと取り付けることができます。  
+KailhBOXスイッチ、Chocスイッチは取り付けに力が多少必要なので注意してください。  
+しっかりと取り付けられてないことがあるので取り付けた後再度スイッチを押し込んで最後まで取り付けできているか確認します。
+![2019-01-26 15 10 06](https://user-images.githubusercontent.com/6285554/51967840-b66f3c80-24b3-11e9-8f50-6d8d31fe85e5.jpg)
+
+## OLEDを取り付ける
+ProMicro下部のソケットにOLEDピンを差し込み、OLEDモジュールを載せます。斜めにならないように気をつけながらはんだ付けをします。
+
+## ProMicro保護アクリルの取り付け
+ProMicro上部用のアクリルの保護紙を剥がし、取り付けます。  
+**幅が広い方を外側にして**取り付けます。上部をネジ止めします。
+![plate](https://user-images.githubusercontent.com/6285554/48837829-c4288780-edc9-11e8-8efb-6714d8e68e92.png)
+
+![2019-01-26 15 21 15](https://user-images.githubusercontent.com/6285554/51967842-b8d19680-24b3-11e9-8402-85180ce10403.jpg)
+
+## キーマップの書き込み
+キーマップを書き込むために準備が必要です。導入されていることを前提に記述しております。[qmk公式のページなどを参考に導入して下さい。](https://docs.qmk.fm/#/getting_started_build_tools) (WIndows:MSYS2 Mac,Linux系:avrdude)
+
+QMK Toolboxを使用すれば環境構築の必要が無く、GUIで書き込みが行うことができます。(カスタマイズする場合は上記の書き込み環境を構築することを推奨します)
+[qmk/qmk_toolbox](https://github.com/qmk/qmk_toolbox/releases)  
+
+ 
 Lily58のデフォルトキーマップを書き込むにはqmk_firmwareのフォルダ階層で以下を実行します
 
-    make lily58:default:avrdude  
+    sudo make lily58:default:avrdude  
 
 
 **Detecting USB port, reset your controller now...** と表示されたらキーボード上のリセットボタンを押すと書き込みが始まります。  
 上記の要領でもう片方のキーボードにも同じように書き込みを行って下さい。 
 
-Defaultキーマップは以下のようになっています。
+Defaultキーマップは以下のようになっています。  
+macOS/USキーボード 環境で使用する前提で作られているキーマップ配置なのでJIS配列に変更や英/かな切り替えなどのキーマップを追加するなど使用者の方に合わせたキーマップを作ってみてください。自作キーボードの醍醐味です。  
 ![lily58_default](https://user-images.githubusercontent.com/6285554/47273241-38ee8300-d5cc-11e8-9099-10c1b35e24fc.png)
 
 ## 動作確認
-左右をTRRSケーブル(TRSケーブル)で接続し左側のProMicro(デフォルトキーマップの場合)にMicroUSBケーブルを接続しキーが反応するかを確認して下さい。  
+左右をTRRSケーブルで接続し左側のProMicro(デフォルトキーマップの場合)にMicroUSBケーブルを接続しキーが反応するかを確認して下さい。  
 裏面にゴム足を4箇所取り付けて完成です。お疲れ様でした。
-![vu6sptlhszykivrvgkltyw_thumb_2d44](https://user-images.githubusercontent.com/6285554/52173150-795fbe80-27c1-11e9-8376-edc698e943e8.jpg)
+![2019-01-26 15 24 52](https://user-images.githubusercontent.com/6285554/51967992-24b3ff00-24b4-11e9-8cd3-1e679094682f.jpg)
+![unadjustednonraw_thumb_2ddc](https://user-images.githubusercontent.com/6285554/53640050-6203dc00-3c6e-11e9-9434-5591ed3e414f.jpg)
 
-![47264498-53384a80-d553-11e8-907a-a03c6f2c5893](https://user-images.githubusercontent.com/6285554/52002699-fd861d80-2505-11e9-96a8-f58a93534255.jpg)
 
 ## 困ったときは
 ### Q.1列(複数列)又は1行(複数行)キースイッチが反応しない
 A.ProMicroのはんだ付け、取り付けしっかりとできてない場合があります。再度確認し、必要に応じて再度はんだ付け、取り付けを行ってください。
 
 ### Q.キースイッチが単体で反応しない
-A.キースイッチのはんだづけ又はダイオードのはんだ付けに問題がある可能性があります。
+A.キースイッチの差し込み、ソケット又はダイオードのはんだ付けに問題がある可能性があります。
 
-キースイッチの場合
-問題のあるキースイッチのはんだ付けを確認してください。はんだが足りてない場合は再度はんだ付けを行ってください。
+キースイッチの差し込みの場合  
+1度キースイッチを抜いてからピンの曲がりなどが無いかを確認して再度強く押し込んで取り付けてください。
+
+ソケットのはんだ付けの場合  
+問題のソケットのはんだ付け箇所に再度はんだごてを当て必要に応じてはんだを流してください。  
   
 ダイオードのはんだ付けの場合
-ダイオードの向きを確認してください。間違っていた場合は外してはんだ付けし直してください。
+問題のダイオードの向きを確認してください。間違っていた場合は外してはんだ付けし直してください。
 はんだ付けが足りない場合は再度はんだ付けを行ってください。
 
+### Q."@"や"["などで入力した記号と違う記号が入力される(Windows等)
+OS上でキーボードの認識がJISキーボードとして認識されているためLily58(USキーボード扱い)で入力した際に別の記号が入力されてしまいます。  
+OSのキーボード設定でLily58をUSキーボードとして設定してください。切り替え後、日本語入力への切り替えがUSキーボード用の切り替えキーになり、JISキーボードとは異なりますのでご注意ください(キーマップなどでカスタマイズ可能)。
+
+
 **困った場合などはお気軽にDiscordサーバー([Self-Made Keyboards in Japan](https://discordapp.com/invite/NM7XtDW))の「#Lily58」チャンネルもしくはTwitter:@F_YUUCHIにメッセージをお送りください**
+
+## キーマップ変更をする
+自作キーボードは上記で使用したqmk firmwareを使用して動作をしています。  
+qmk firmwareはカスタマイズ性が非常に高く、キーマップを編集するだけでも非常に高機能にカスタマイズすることができます。
+### keymap.cを編集してカスタマイズする
+キーマップをカスタマイズする場合はqmk_firmware/keyboards/lily58/keymaps/defaultのフォルダを任意の名前でコピーします。
+内部にあるkeymap.cを適宜変更をします。  
+キーコードは以下の[qmkの公式ドキュメント](https://docs.qmk.fm/#/keycodes)等を参考にしてください。
+
+キーマップ変更後は
+
+    sudo make lily58:(任意のフォルダ名):avrdude  
+
+で書き込みを行います。エラーが出る場合は確認をしてください。  
+  
+### QMK Configuratorを使用してカスタマイズする方法(非推奨)
+[QMK Configurator](https://config.qmk.fm/#/lily58/rev1/LAYOUT)を使用するとkeymap.cファイルを編集せずにブラウザ上でオリジナルのキーマップを作成可能です。  
+作成後ダウンロードしたjsonファイルをQMK Toolboxに読み込み、書き込みを行います。
+
