@@ -1371,7 +1371,7 @@ U 1 1 5F03D82E
 P 5550 4900
 F 0 "SW25" H 5550 5267 50  0000 C CNN
 F 1 "Rotary_Encoder_Switch" H 5550 5176 50  0000 C CNN
-F 2 "fractory:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 5400 5060 50  0001 C CNN
+F 2 "Rotary_Encoder:RotaryEncoder_Alps_EC11E-Switch_Vertical_H20mm" H 5400 5060 50  0001 C CNN
 F 3 "~" H 5550 5160 50  0001 C CNN
 	1    5550 4900
 	1    0    0    -1  
