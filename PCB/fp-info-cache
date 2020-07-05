@@ -1,4 +1,4 @@
-17036661577181428
+17038255558586428
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -75578,6 +75578,13 @@ SK6812MINI_underglow
 0
 8
 4
+fractory
+SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm
+SMD Solder Jumper, 1x1.5mm Pads, 0.3mm gap, bridged with 1 copper strip
+solder jumper open
+0
+2
+2
 fractory
 Stabilizer_MX_2u
 MX-style stabilizer mount
