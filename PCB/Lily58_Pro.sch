@@ -1,7 +1,7 @@
 EESchema Schematic File Version 4
 EELAYER 30 0
 EELAYER END
-$Descr A4 11693 8268
+$Descr A3 16535 11693
 encoding utf-8
 Sheet 1 1
 Title ""
@@ -1430,4 +1430,834 @@ F 3 "" H 9000 4200 50  0000 C CNN
 	1    9000 4200
 	1    0    0    -1  
 $EndComp
+NoConn ~ 9050 10050
+Wire Wire Line
+	4925 8750 5250 8750
+Wire Wire Line
+	4925 8100 4925 8750
+Wire Wire Line
+	5250 8100 4925 8100
+Connection ~ 5550 10350
+Wire Wire Line
+	5050 10350 5550 10350
+Connection ~ 5550 9050
+Wire Wire Line
+	5050 9050 5550 9050
+Connection ~ 5550 8450
+Wire Wire Line
+	5050 8450 5550 8450
+Connection ~ 5550 7750
+Wire Wire Line
+	5050 7750 5550 7750
+Connection ~ 5550 7150
+Wire Wire Line
+	5050 7150 5550 7150
+Wire Wire Line
+	10175 9400 9850 9400
+Wire Wire Line
+	10175 8750 10175 9400
+Wire Wire Line
+	9850 8750 10175 8750
+Wire Wire Line
+	10175 8100 9850 8100
+Wire Wire Line
+	10175 7450 10175 8100
+Wire Wire Line
+	9850 7450 10175 7450
+Wire Wire Line
+	7450 10050 7650 10050
+Wire Wire Line
+	6650 10050 6850 10050
+Wire Wire Line
+	7150 10350 7950 10350
+Connection ~ 7150 10350
+Connection ~ 6350 10350
+Wire Wire Line
+	6350 10350 7150 10350
+$Comp
+L LED:SK6812MINI L28
+U 1 1 5F0746B2
+P 7950 10050
+F 0 "L28" H 7975 10300 50  0000 L CNN
+F 1 "SK6812mini" H 7475 9800 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8000 9750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8050 9675 50  0001 L TNN
+	1    7950 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L27
+U 1 1 5F0746B8
+P 7150 10050
+F 0 "L27" H 7175 10300 50  0000 L CNN
+F 1 "SK6812mini" H 6675 9800 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 7200 9750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 7250 9675 50  0001 L TNN
+	1    7150 10050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 10350 5550 10350
+Wire Wire Line
+	5850 10050 6050 10050
+$Comp
+L LED:SK6812MINI L26
+U 1 1 5F0746C0
+P 6350 10050
+F 0 "L26" H 6375 10300 50  0000 L CNN
+F 1 "SK6812mini" H 5875 9800 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 6400 9750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 6450 9675 50  0001 L TNN
+	1    6350 10050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0746C6
+P 5050 10350
+F 0 "#PWR?" H 5050 10100 50  0001 C CNN
+F 1 "GND" H 5055 10177 50  0000 C CNN
+F 2 "" H 5050 10350 50  0001 C CNN
+F 3 "" H 5050 10350 50  0001 C CNN
+	1    5050 10350
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F0746CC
+P 5050 9750
+F 0 "#PWR?" H 5050 9600 50  0001 C CNN
+F 1 "VCC" H 5067 9923 50  0000 C CNN
+F 2 "" H 5050 9750 50  0001 C CNN
+F 3 "" H 5050 9750 50  0001 C CNN
+	1    5050 9750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L25
+U 1 1 5F0746D2
+P 5550 10050
+F 0 "L25" H 5575 10300 50  0000 L CNN
+F 1 "SK6812mini" H 5075 9800 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 5600 9750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5650 9675 50  0001 L TNN
+	1    5550 10050
+	1    0    0    -1  
+$EndComp
+Connection ~ 9550 9100
+Wire Wire Line
+	9550 9100 10050 9100
+Connection ~ 9550 9700
+Wire Wire Line
+	9550 9700 10050 9700
+Wire Wire Line
+	9050 9400 9250 9400
+Wire Wire Line
+	8250 9400 8450 9400
+Wire Wire Line
+	7450 9400 7650 9400
+Wire Wire Line
+	6650 9400 6850 9400
+Wire Wire Line
+	8750 9700 9550 9700
+Connection ~ 8750 9700
+Wire Wire Line
+	7950 9700 8750 9700
+Connection ~ 7950 9700
+Wire Wire Line
+	7150 9700 7950 9700
+Connection ~ 7150 9700
+Connection ~ 6350 9700
+Wire Wire Line
+	6350 9700 7150 9700
+Wire Wire Line
+	8750 9100 9550 9100
+Connection ~ 8750 9100
+Wire Wire Line
+	7950 9100 8750 9100
+Connection ~ 7950 9100
+Wire Wire Line
+	7150 9100 7950 9100
+Connection ~ 7150 9100
+Connection ~ 6350 9100
+Wire Wire Line
+	6350 9100 7150 9100
+$Comp
+L LED:SK6812MINI L24
+U 1 1 5F0746F0
+P 9550 9400
+F 0 "L24" H 9425 9650 50  0000 L CNN
+F 1 "SK6812mini" H 9075 9150 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 9600 9100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9650 9025 50  0001 L TNN
+	1    9550 9400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L23
+U 1 1 5F0746F6
+P 8750 9400
+F 0 "L23" H 8625 9650 50  0000 L CNN
+F 1 "SK6812mini" H 8275 9150 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8800 9100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8850 9025 50  0001 L TNN
+	1    8750 9400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L22
+U 1 1 5F0746FC
+P 7950 9400
+F 0 "L22" H 7825 9650 50  0000 L CNN
+F 1 "SK6812mini" H 7475 9150 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8000 9100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8050 9025 50  0001 L TNN
+	1    7950 9400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L21
+U 1 1 5F074702
+P 7150 9400
+F 0 "L21" H 7025 9650 50  0000 L CNN
+F 1 "SK6812mini" H 6675 9150 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 7200 9100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 7250 9025 50  0001 L TNN
+	1    7150 9400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 9700 5550 9700
+Wire Wire Line
+	5550 9100 6350 9100
+Wire Wire Line
+	5850 9400 6050 9400
+$Comp
+L LED:SK6812MINI L20
+U 1 1 5F07470B
+P 6350 9400
+F 0 "L20" H 6225 9650 50  0000 L CNN
+F 1 "SK6812mini" H 5875 9150 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 6400 9100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 6450 9025 50  0001 L TNN
+	1    6350 9400
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F074711
+P 10050 9700
+F 0 "#PWR?" H 10050 9450 50  0001 C CNN
+F 1 "GND" H 10055 9527 50  0000 C CNN
+F 2 "" H 10050 9700 50  0001 C CNN
+F 3 "" H 10050 9700 50  0001 C CNN
+	1    10050 9700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F074717
+P 10050 9100
+F 0 "#PWR?" H 10050 8950 50  0001 C CNN
+F 1 "VCC" H 10067 9273 50  0000 C CNN
+F 2 "" H 10050 9100 50  0001 C CNN
+F 3 "" H 10050 9100 50  0001 C CNN
+	1    10050 9100
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L19
+U 1 1 5F07471D
+P 5550 9400
+F 0 "L19" H 5425 9650 50  0000 L CNN
+F 1 "SK6812mini" H 5075 9150 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 5600 9100 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5650 9025 50  0001 L TNN
+	1    5550 9400
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 8750 9250 8750
+Wire Wire Line
+	8250 8750 8450 8750
+Wire Wire Line
+	7450 8750 7650 8750
+Wire Wire Line
+	6650 8750 6850 8750
+Wire Wire Line
+	8750 9050 9550 9050
+Connection ~ 8750 9050
+Wire Wire Line
+	7950 9050 8750 9050
+Connection ~ 7950 9050
+Wire Wire Line
+	7150 9050 7950 9050
+Connection ~ 7150 9050
+Connection ~ 6350 9050
+Wire Wire Line
+	6350 9050 7150 9050
+Wire Wire Line
+	8750 8450 9550 8450
+Connection ~ 8750 8450
+Wire Wire Line
+	7950 8450 8750 8450
+Connection ~ 7950 8450
+Wire Wire Line
+	7150 8450 7950 8450
+Connection ~ 7150 8450
+Connection ~ 6350 8450
+Wire Wire Line
+	6350 8450 7150 8450
+$Comp
+L LED:SK6812MINI L18
+U 1 1 5F074737
+P 9550 8750
+F 0 "L18" H 9575 9000 50  0000 L CNN
+F 1 "SK6812mini" H 9575 8500 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 9600 8450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9650 8375 50  0001 L TNN
+	1    9550 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L17
+U 1 1 5F07473D
+P 8750 8750
+F 0 "L17" H 8775 9000 50  0000 L CNN
+F 1 "SK6812mini" H 8775 8500 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8800 8450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8850 8375 50  0001 L TNN
+	1    8750 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L16
+U 1 1 5F074743
+P 7950 8750
+F 0 "L16" H 7975 9000 50  0000 L CNN
+F 1 "SK6812mini" H 7975 8500 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8000 8450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8050 8375 50  0001 L TNN
+	1    7950 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L15
+U 1 1 5F074749
+P 7150 8750
+F 0 "L15" H 7175 9000 50  0000 L CNN
+F 1 "SK6812mini" H 7175 8500 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 7200 8450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 7250 8375 50  0001 L TNN
+	1    7150 8750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 9050 5550 9050
+Wire Wire Line
+	5550 8450 6350 8450
+Wire Wire Line
+	5850 8750 6050 8750
+$Comp
+L LED:SK6812MINI L14
+U 1 1 5F074752
+P 6350 8750
+F 0 "L14" H 6375 9000 50  0000 L CNN
+F 1 "SK6812mini" H 6375 8500 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 6400 8450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 6450 8375 50  0001 L TNN
+	1    6350 8750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F074758
+P 5050 9050
+F 0 "#PWR?" H 5050 8800 50  0001 C CNN
+F 1 "GND" H 5055 8877 50  0000 C CNN
+F 2 "" H 5050 9050 50  0001 C CNN
+F 3 "" H 5050 9050 50  0001 C CNN
+	1    5050 9050
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F07475E
+P 5050 8450
+F 0 "#PWR?" H 5050 8300 50  0001 C CNN
+F 1 "VCC" H 5067 8623 50  0000 C CNN
+F 2 "" H 5050 8450 50  0001 C CNN
+F 3 "" H 5050 8450 50  0001 C CNN
+	1    5050 8450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L13
+U 1 1 5F074764
+P 5550 8750
+F 0 "L13" H 5575 9000 50  0000 L CNN
+F 1 "SK6812mini" H 5575 8500 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 5600 8450 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5650 8375 50  0001 L TNN
+	1    5550 8750
+	1    0    0    -1  
+$EndComp
+Connection ~ 9550 7800
+Wire Wire Line
+	9550 7800 10050 7800
+Connection ~ 9550 8400
+Wire Wire Line
+	9550 8400 10050 8400
+Wire Wire Line
+	9050 8100 9250 8100
+Wire Wire Line
+	8250 8100 8450 8100
+Wire Wire Line
+	7450 8100 7650 8100
+Wire Wire Line
+	6650 8100 6850 8100
+Wire Wire Line
+	8750 8400 9550 8400
+Connection ~ 8750 8400
+Wire Wire Line
+	7950 8400 8750 8400
+Connection ~ 7950 8400
+Wire Wire Line
+	7150 8400 7950 8400
+Connection ~ 7150 8400
+Connection ~ 6350 8400
+Wire Wire Line
+	6350 8400 7150 8400
+Wire Wire Line
+	8750 7800 9550 7800
+Connection ~ 8750 7800
+Wire Wire Line
+	7950 7800 8750 7800
+Connection ~ 7950 7800
+Wire Wire Line
+	7150 7800 7950 7800
+Connection ~ 7150 7800
+Connection ~ 6350 7800
+Wire Wire Line
+	6350 7800 7150 7800
+$Comp
+L LED:SK6812MINI L12
+U 1 1 5F074782
+P 9550 8100
+F 0 "L12" H 9425 8350 50  0000 L CNN
+F 1 "SK6812mini" H 9075 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 9600 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9650 7725 50  0001 L TNN
+	1    9550 8100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L11
+U 1 1 5F074788
+P 8750 8100
+F 0 "L11" H 8625 8350 50  0000 L CNN
+F 1 "SK6812mini" H 8275 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8800 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8850 7725 50  0001 L TNN
+	1    8750 8100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L10
+U 1 1 5F07478E
+P 7950 8100
+F 0 "L10" H 7825 8350 50  0000 L CNN
+F 1 "SK6812mini" H 7475 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8000 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8050 7725 50  0001 L TNN
+	1    7950 8100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L9
+U 1 1 5F074794
+P 7150 8100
+F 0 "L9" H 7025 8350 50  0000 L CNN
+F 1 "SK6812mini" H 6675 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 7200 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 7250 7725 50  0001 L TNN
+	1    7150 8100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 8400 5550 8400
+Wire Wire Line
+	5550 7800 6350 7800
+Wire Wire Line
+	5850 8100 6050 8100
+$Comp
+L LED:SK6812MINI L8
+U 1 1 5F07479D
+P 6350 8100
+F 0 "L8" H 6225 8350 50  0000 L CNN
+F 1 "SK6812mini" H 5875 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 6400 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 6450 7725 50  0001 L TNN
+	1    6350 8100
+	-1   0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0747A3
+P 10050 8400
+F 0 "#PWR?" H 10050 8150 50  0001 C CNN
+F 1 "GND" H 10055 8227 50  0000 C CNN
+F 2 "" H 10050 8400 50  0001 C CNN
+F 3 "" H 10050 8400 50  0001 C CNN
+	1    10050 8400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F0747A9
+P 10050 7800
+F 0 "#PWR?" H 10050 7650 50  0001 C CNN
+F 1 "VCC" H 10067 7973 50  0000 C CNN
+F 2 "" H 10050 7800 50  0001 C CNN
+F 3 "" H 10050 7800 50  0001 C CNN
+	1    10050 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L7
+U 1 1 5F0747AF
+P 5550 8100
+F 0 "L7" H 5425 8350 50  0000 L CNN
+F 1 "SK6812mini" H 5075 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 5600 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5650 7725 50  0001 L TNN
+	1    5550 8100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	9050 7450 9250 7450
+Wire Wire Line
+	8250 7450 8450 7450
+Wire Wire Line
+	7450 7450 7650 7450
+Wire Wire Line
+	6650 7450 6850 7450
+Wire Wire Line
+	8750 7750 9550 7750
+Connection ~ 8750 7750
+Wire Wire Line
+	7950 7750 8750 7750
+Connection ~ 7950 7750
+Wire Wire Line
+	7150 7750 7950 7750
+Connection ~ 7150 7750
+Connection ~ 6350 7750
+Wire Wire Line
+	6350 7750 7150 7750
+Wire Wire Line
+	8750 7150 9550 7150
+Connection ~ 8750 7150
+Wire Wire Line
+	7950 7150 8750 7150
+Connection ~ 7950 7150
+Wire Wire Line
+	7150 7150 7950 7150
+Connection ~ 7150 7150
+Connection ~ 6350 7150
+Wire Wire Line
+	6350 7150 7150 7150
+$Comp
+L LED:SK6812MINI L6
+U 1 1 5F0747C9
+P 9550 7450
+F 0 "L6" H 9575 7700 50  0000 L CNN
+F 1 "SK6812mini" H 9575 7200 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 9600 7150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 9650 7075 50  0001 L TNN
+	1    9550 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L5
+U 1 1 5F0747CF
+P 8750 7450
+F 0 "L5" H 8775 7700 50  0000 L CNN
+F 1 "SK6812mini" H 8775 7200 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8800 7150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8850 7075 50  0001 L TNN
+	1    8750 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L4
+U 1 1 5F0747D5
+P 7950 7450
+F 0 "L4" H 7975 7700 50  0000 L CNN
+F 1 "SK6812mini" H 7975 7200 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8000 7150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8050 7075 50  0001 L TNN
+	1    7950 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L3
+U 1 1 5F0747DB
+P 7150 7450
+F 0 "L3" H 7175 7700 50  0000 L CNN
+F 1 "SK6812mini" H 7175 7200 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 7200 7150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 7250 7075 50  0001 L TNN
+	1    7150 7450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6350 7750 5550 7750
+Wire Wire Line
+	5550 7150 6350 7150
+Wire Wire Line
+	5850 7450 6050 7450
+$Comp
+L LED:SK6812MINI L2
+U 1 1 5F0747E4
+P 6350 7450
+F 0 "L2" H 6375 7700 50  0000 L CNN
+F 1 "SK6812mini" H 6375 7200 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 6400 7150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 6450 7075 50  0001 L TNN
+	1    6350 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F0747EA
+P 5050 7750
+F 0 "#PWR?" H 5050 7500 50  0001 C CNN
+F 1 "GND" H 5055 7577 50  0000 C CNN
+F 2 "" H 5050 7750 50  0001 C CNN
+F 3 "" H 5050 7750 50  0001 C CNN
+	1    5050 7750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 5F0747F0
+P 5050 7150
+F 0 "#PWR?" H 5050 7000 50  0001 C CNN
+F 1 "VCC" H 5067 7323 50  0000 C CNN
+F 2 "" H 5050 7150 50  0001 C CNN
+F 3 "" H 5050 7150 50  0001 C CNN
+	1    5050 7150
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L1
+U 1 1 5F0747F6
+P 5550 7450
+F 0 "L1" H 5575 7700 50  0000 L CNN
+F 1 "SK6812mini" H 5575 7200 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 5600 7150 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 5650 7075 50  0001 L TNN
+	1    5550 7450
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L29
+U 1 1 5F0747FC
+P 8750 10050
+F 0 "L29" H 8775 10300 50  0000 L CNN
+F 1 "SK6812mini" H 8275 9800 50  0000 L CNN
+F 2 "fractory:SK6812MINI" H 8800 9750 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 8850 9675 50  0001 L TNN
+	1    8750 10050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8250 10050 8450 10050
+Wire Wire Line
+	7950 10350 8750 10350
+Connection ~ 7950 10350
+Wire Wire Line
+	5050 9750 5550 9750
+Connection ~ 5550 9750
+Wire Wire Line
+	5550 9750 6350 9750
+Connection ~ 6350 9750
+Wire Wire Line
+	6350 9750 7150 9750
+Connection ~ 7150 9750
+Wire Wire Line
+	7150 9750 7950 9750
+Connection ~ 7950 9750
+Wire Wire Line
+	7950 9750 8750 9750
+Wire Wire Line
+	4925 10050 5250 10050
+Wire Wire Line
+	1800 7800 2300 7800
+$Comp
+L power:VCC #PWR?
+U 1 1 5F074810
+P 1800 7800
+F 0 "#PWR?" H 1800 7650 50  0001 C CNN
+F 1 "VCC" H 1817 7973 50  0000 C CNN
+F 2 "" H 1800 7800 50  0001 C CNN
+F 3 "" H 1800 7800 50  0001 C CNN
+	1    1800 7800
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L30
+U 1 1 5F074816
+P 2300 8100
+F 0 "L30" H 2150 8350 50  0000 L CNN
+F 1 "SK6812mini" H 1825 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI_underglow" H 2350 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 2400 7725 50  0001 L TNN
+	1    2300 8100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2600 8100 2800 8100
+$Comp
+L LED:SK6812MINI L31
+U 1 1 5F07481D
+P 3100 8100
+F 0 "L31" H 2950 8350 50  0000 L CNN
+F 1 "SK6812mini" H 2625 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI_underglow" H 3150 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 7725 50  0001 L TNN
+	1    3100 8100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	3400 8100 3600 8100
+$Comp
+L LED:SK6812MINI L32
+U 1 1 5F074824
+P 3900 8100
+F 0 "L32" H 3750 8350 50  0000 L CNN
+F 1 "SK6812mini" H 3425 7850 50  0000 L CNN
+F 2 "fractory:SK6812MINI_underglow" H 3950 7800 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4000 7725 50  0001 L TNN
+	1    3900 8100
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	4525 8775 4200 8775
+Wire Wire Line
+	3400 8775 3600 8775
+Wire Wire Line
+	2600 8775 2800 8775
+$Comp
+L LED:SK6812MINI L35
+U 1 1 5F07482D
+P 3900 8775
+F 0 "L35" H 3925 9025 50  0000 L CNN
+F 1 "SK6812mini" H 3925 8525 50  0000 L CNN
+F 2 "fractory:SK6812MINI_underglow" H 3950 8475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 4000 8400 50  0001 L TNN
+	1    3900 8775
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED:SK6812MINI L34
+U 1 1 5F074833
+P 3100 8775
+F 0 "L34" H 3125 9025 50  0000 L CNN
+F 1 "SK6812mini" H 3125 8525 50  0000 L CNN
+F 2 "fractory:SK6812MINI_underglow" H 3150 8475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 3200 8400 50  0001 L TNN
+	1    3100 8775
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 7800 3100 7800
+Connection ~ 2300 7800
+Connection ~ 3100 7800
+Wire Wire Line
+	3100 7800 3900 7800
+Wire Wire Line
+	4525 8775 4525 8100
+Wire Wire Line
+	4200 8100 4525 8100
+Wire Wire Line
+	1800 8400 2300 8400
+$Comp
+L power:GND #PWR?
+U 1 1 5F074840
+P 1800 8400
+F 0 "#PWR?" H 1800 8150 50  0001 C CNN
+F 1 "GND" H 1805 8227 50  0000 C CNN
+F 2 "" H 1800 8400 50  0001 C CNN
+F 3 "" H 1800 8400 50  0001 C CNN
+	1    1800 8400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 9075 4400 9075
+$Comp
+L power:GND #PWR?
+U 1 1 5F074847
+P 4400 9075
+F 0 "#PWR?" H 4400 8825 50  0001 C CNN
+F 1 "GND" H 4405 8902 50  0000 C CNN
+F 2 "" H 4400 9075 50  0001 C CNN
+F 3 "" H 4400 9075 50  0001 C CNN
+	1    4400 9075
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2300 8400 3100 8400
+Connection ~ 2300 8400
+Connection ~ 3100 8400
+Wire Wire Line
+	3100 8400 3900 8400
+$Comp
+L power:VCC #PWR?
+U 1 1 5F074851
+P 4400 8475
+F 0 "#PWR?" H 4400 8325 50  0001 C CNN
+F 1 "VCC" H 4417 8648 50  0000 C CNN
+F 2 "" H 4400 8475 50  0001 C CNN
+F 3 "" H 4400 8475 50  0001 C CNN
+	1    4400 8475
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3900 8475 4400 8475
+Wire Wire Line
+	3900 8475 3100 8475
+Connection ~ 3900 8475
+Connection ~ 3100 8475
+Wire Wire Line
+	3100 8475 2300 8475
+Wire Wire Line
+	3900 9075 3100 9075
+Connection ~ 3900 9075
+Connection ~ 3100 9075
+Wire Wire Line
+	3100 9075 2300 9075
+Wire Wire Line
+	4925 9400 4925 10050
+Wire Wire Line
+	5250 9400 4925 9400
+$Comp
+L LED:SK6812MINI L33
+U 1 1 5F074862
+P 2300 8775
+F 0 "L33" H 2325 9025 50  0000 L CNN
+F 1 "SK6812mini" H 2325 8525 50  0000 L CNN
+F 2 "Lily58-footprint:SK6812MINI_underglow_rev" H 2350 8475 50  0001 L TNN
+F 3 "https://cdn-shop.adafruit.com/product-files/2686/SK6812MINI_REV.01-1-2.pdf" H 2400 8400 50  0001 L TNN
+	1    2300 8775
+	1    0    0    -1  
+$EndComp
+Text GLabel 2000 8775 0    50   Input ~ 0
+LED
+Wire Wire Line
+	2000 8100 1675 8100
+Wire Wire Line
+	1675 8100 1675 7450
+Wire Wire Line
+	1675 7450 5250 7450
 $EndSCHEMATC
