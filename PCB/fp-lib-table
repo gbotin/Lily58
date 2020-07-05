@@ -1,0 +1,5 @@
+(fp_lib_table
+  (lib (name fractory)(type KiCad)(uri ${KIPRJMOD}/fractory.pretty)(options "")(descr ""))
+  (lib (name keyswitches)(type KiCad)(uri ${KIPRJMOD}/keyswitches.pretty)(options "")(descr ""))
+  (lib (name Lily58_Pro-footprint)(type KiCad)(uri ${KIPRJMOD}/Lily58_Pro-footprint.pretty)(options "")(descr ""))
+)
