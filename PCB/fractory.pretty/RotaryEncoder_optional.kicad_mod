@@ -1,4 +1,4 @@
-(module RotaryEncoder_optional (layer F.Cu) (tedit 5F0D4803)
+(module RotaryEncoder_optional (layer F.Cu) (tedit 5F0D6F14)
   (descr "Alps rotary encoder, EC12E... with switch, vertical shaft, http://www.alps.com/prod/info/E/HTML/Encoder/Incremental/EC11/EC11E15204A3.html")
   (tags "rotary encoder")
   (fp_text reference REF** (at 7.09 8.14 180) (layer F.Fab)
