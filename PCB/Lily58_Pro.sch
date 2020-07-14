@@ -1294,17 +1294,6 @@ Text GLabel 3850 2600 2    50   Input ~ 0
 enc2
 Wire Wire Line
 	5850 4600 5500 4600
-$Comp
-L Device:Rotary_Encoder_Switch SW25
-U 1 1 5F03D82E
-P 5550 4900
-F 0 "SW25" H 5550 5267 50  0000 C CNN
-F 1 "Rotary_Encoder_Switch" H 5550 5176 50  0000 C CNN
-F 2 "fractory:RotaryEncoder_optional" H 5400 5060 50  0001 C CNN
-F 3 "~" H 5550 5160 50  0001 C CNN
-	1    5550 4900
-	1    0    0    -1  
-$EndComp
 Text GLabel 2550 2700 0    50   Input ~ 0
 enc1
 Text GLabel 5250 4800 0    50   Input ~ 0
@@ -2259,5 +2248,16 @@ F 2 "fractory:SolderJumper-2_P1.3mm_Bridged_Pad1.0x1.5mm" H 3850 4550 50  0001 C
 F 3 "" H 3850 4550 50  0000 C CNN
 	1    3850 4550
 	-1   0    0    1   
+$EndComp
+$Comp
+L Device:Rotary_Encoder_Switch SW
+U 1 1 5F03D82E
+P 5550 4900
+F 0 "SW" H 5550 5267 50  0000 C CNN
+F 1 "Rotary_Encoder_Switch" H 5550 5176 50  0000 C CNN
+F 2 "fractory:RotaryEncoder_optional" H 5400 5060 50  0001 C CNN
+F 3 "~" H 5550 5160 50  0001 C CNN
+	1    5550 4900
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC
